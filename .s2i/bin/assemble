@@ -1,9 +1,12 @@
 #!/bin/bash -e
 
+# check if installing new packages using my current subscription of RHEL works.
+yum -y install vim
+
 if [ -e /usr/local/sti/assemble ]; then
   # old assemble location in previous php image versions
   source /usr/local/sti/assemble
-else 
+else
   source ${STI_SCRIPTS_PATH}/assemble
 fi
 
